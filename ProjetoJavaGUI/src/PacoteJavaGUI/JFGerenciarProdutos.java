@@ -312,7 +312,7 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
-        PacoteJavaGUI.JFMenuPrincipal frame = new PacoteJavaGUI.JFMenuPrincipal();
+    JFMenuPrincipal frame = new JFMenuPrincipal();
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnVoltarMenuActionPerformed

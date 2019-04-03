@@ -5,6 +5,8 @@
  */
 package PacoteJavaGUI;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author LABORATORIO_INFO
@@ -48,6 +50,11 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         btnFuncionario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnFuncionario.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         btnFuncionario.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFuncionarioActionPerformed(evt);
+            }
+        });
 
         btnFornecedor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnFornecedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/fornecedor.png"))); // NOI18N
@@ -152,6 +159,13 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void btnFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncionarioActionPerformed
+
+        JFGerenciarFuncionarios openFunc = new JFGerenciarFuncionarios();
+        openFunc.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnFuncionarioActionPerformed
 
     /**
      * @param args the command line arguments

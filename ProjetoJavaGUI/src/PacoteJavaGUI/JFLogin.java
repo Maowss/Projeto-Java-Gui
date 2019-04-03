@@ -1,5 +1,7 @@
 package PacoteJavaGUI;
 
+import javax.swing.JOptionPane;
+
 public class JFLogin extends javax.swing.JFrame {
 
     public JFLogin() {
@@ -117,9 +119,23 @@ public class JFLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        PacoteJavaGUI.JFMenuPrincipal frame = new PacoteJavaGUI.JFMenuPrincipal();
-        frame.setVisible(true);
-        this.dispose();
+//        PacoteJavaGUI.JFMenuPrincipal frame = new PacoteJavaGUI.JFMenuPrincipal();
+//        frame.setVisible(true);
+//        this.dispose();
+
+        String nomeUsuario = txtUsuario.getText();
+        String senhaUsuario = txtSenha.getText();
+
+        if (nomeUsuario.equals("admin") && senhaUsuario.equals("admin")) {
+            JOptionPane.showMessageDialog(null, "Bem vindo");
+            JFMenuPrincipal open = new JFMenuPrincipal();
+            open.setVisible(true);
+//          this.dispose();
+            this.setVisible(false);
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuario ou senha errados");
+        }
+
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
@@ -136,7 +152,7 @@ public class JFLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSairActionPerformed
 
     public static void main(String args[]) {
-        
+
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
